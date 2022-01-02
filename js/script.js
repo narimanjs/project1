@@ -1,4 +1,4 @@
-"use strict"
+"use strict" 
 
 let numberOfFilms;
 
@@ -29,7 +29,7 @@ function rememberMyFilms() {
             personalMovieDB.movies[a] = b;
             console.log('ok!');
         } else {
-            console.log('error');
+            console.log('error!');
             i--;
         }
     }    
