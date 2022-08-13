@@ -1,27 +1,51 @@
 "use strict" 
 
-const box = document.querySelector('.box'),
-      btn = document.querySelector('button');
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', (e) =>{
+    e.target.style.backgroundColor = 'red';
+});
+
+// btn.addEventListener('click', () => {
+
+// })
+
+const obj = {
+    num: 5,
+    sayNumber: function() {
+        const say = () => {
+            console.log(this.num);
+        };
+        say();
+    }
+};
+obj.sayNumber();
+
+const double = a => a * 2;
+console.log(double(4));
+
+// const box = document.querySelector('.box'),
+//       btn = document.querySelector('button');
 
 // const width = box.clientWidth;
 // const height = box.clientHeight;
 
 // const width = box.offsetWidth;
 // const height = box.offsetHeight;
-const width = box.scrollWidth;
-const height = box.scrollHeight;
+// const width = box.scrollWidth;
+// const height = box.scrollHeight;
 
-console.log(width, height);
+// console.log(width, height);
 
-btn.addEventListener('click', () => {
-    // box.style.height = box.scrollHeight + 'px';
-    console.log(box.scrollTop);
-});
-console.log(box.getBoundingClientRect().top);
+// btn.addEventListener('click', () => {
+//     // box.style.height = box.scrollHeight + 'px';
+//     console.log(box.scrollTop);
+// });
+// console.log(box.getBoundingClientRect().top);
 
-const style = window.getComputedStyle(box);
-console.log(style.display);
-console.log(document.documentElement.scrollTop);
+// const style = window.getComputedStyle(box);
+// console.log(style.display);
+// console.log(document.documentElement.scrollTop);
 // let numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
 // const personalMovieDB = {
 //     count: numberOfFilms,
